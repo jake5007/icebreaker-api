@@ -39,7 +39,7 @@ A public REST API that serves random or categorized ice-breaking questions in bo
 
 ---
 
-## 🌐 API Endpoints
+## API Endpoints
 
 | Method | Endpoint                                 | Description                          |
 |--------|------------------------------------------|--------------------------------------|
@@ -50,12 +50,12 @@ A public REST API that serves random or categorized ice-breaking questions in bo
 
 ---
 
-## 📖 API Docs (Swagger)
+## API Docs (Swagger)
 
 Visit [http://localhost:3000/docs](http://localhost:3000/docs) to browse and test the API.
 
 ---
 
-## 📜 License
+## License
 
 MIT
