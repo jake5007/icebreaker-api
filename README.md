@@ -23,9 +23,40 @@ A public REST API that serves random or categorized ice-breaking questions in bo
 
 ---
 
-## Installation
+## 📚 Categories
 
-```bash
-git clone https://github.com/your-username/icebreaker-api.git
-cd icebreaker-api
-npm install
+- `fun`
+- `deep`
+- `work`
+- `travel`
+- `relationship`
+- `favorites`
+- `culture`
+- `future`
+- `childhood`
+- `hypothetical`
+- `wildcard`
+
+---
+
+## 🌐 API Endpoints
+
+| Method | Endpoint                                 | Description                          |
+|--------|------------------------------------------|--------------------------------------|
+| GET    | `/api/v1/questions`                      | Get all questions                    |
+| GET    | `/api/v1/questions/random`               | Get one random question              |
+| GET    | `/api/v1/questions/{category}`           | Get all questions in a category      |
+| GET    | `/api/v1/questions/{category}/random`    | Get one random question in category  |
+
+---
+
+## 📖 API Docs (Swagger)
+
+Visit [http://localhost:3000/docs](http://localhost:3000/docs) to browse and test the API.
+
+---
+
+## 📜 License
+
+MIT
+```
