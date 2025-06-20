@@ -5,7 +5,8 @@ info:
   description: Simple public API to retrieve categorized or random ice-breaking questions.
 
 servers:
-  - url: http://localhost:3000
+  - url: https://icebreaker-api-us13.onrender.com
+    description: Production (Render)
 
 paths:
   /api/v1/questions:
