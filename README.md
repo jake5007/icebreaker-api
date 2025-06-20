@@ -59,4 +59,3 @@ Visit [http://localhost:3000/docs](http://localhost:3000/docs) to browse and tes
 ## 📜 License
 
 MIT
-```
