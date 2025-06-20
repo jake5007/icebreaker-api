@@ -41,18 +41,31 @@ A public REST API that serves random or categorized ice-breaking questions in bo
 
 ## API Endpoints
 
-| Method | Endpoint                                 | Description                          |
-|--------|------------------------------------------|--------------------------------------|
-| GET    | `/api/v1/questions`                      | Get all questions                    |
-| GET    | `/api/v1/questions/random`               | Get one random question              |
-| GET    | `/api/v1/questions/{category}`           | Get all questions in a category      |
-| GET    | `/api/v1/questions/{category}/random`    | Get one random question in category  |
+| Method | Endpoint                              | Description                         |
+| ------ | ------------------------------------- | ----------------------------------- |
+| GET    | `/api/v1/questions`                   | Get all questions                   |
+| GET    | `/api/v1/questions/random`            | Get one random question             |
+| GET    | `/api/v1/questions/{category}`        | Get all questions in a category     |
+| GET    | `/api/v1/questions/{category}/random` | Get one random question in category |
+
+---
+
+## Live API (Render)
+
+- Base URL: [https://icebreaker-api-us13.onrender.com](https://icebreaker-api-us13.onrender.com)
+
+Example calls:
+
+- [`GET /api/v1/questions`](https://icebreaker-api-us13.onrender.com/api/v1/questions)
+- [`GET /api/v1/questions/random`](https://icebreaker-api-us13.onrender.com/api/v1/questions/random)
+- [`GET /api/v1/questions/fun`](https://icebreaker-api-us13.onrender.com/api/v1/questions/fun)
+- [`GET /api/v1/questions/fun/random`](https://icebreaker-api-us13.onrender.com/api/v1/questions/fun/random)
 
 ---
 
 ## API Docs (Swagger)
 
-Visit [http://localhost:3000/docs](http://localhost:3000/docs) to browse and test the API.
+→ [https://icebreaker-api-us13.onrender.com/docs](https://icebreaker-api-us13.onrender.com/docs)
 
 ---
 
