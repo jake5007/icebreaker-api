@@ -1,0 +1,157 @@
+openapi: 3.0.0
+info:
+  title: Icebreaker Questions API
+  version: 1.0.0
+  description: Simple public API to retrieve categorized or random ice-breaking questions.
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+  /api/v1/questions:
+    get:
+      summary: Get all questions
+      responses:
+        "200":
+          description: A list of all questions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  results:
+                    type: integer
+                  data:
+                    type: object
+                    properties:
+                      questions:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Question"
+
+  /api/v1/questions/random:
+    get:
+      summary: Get one random question
+      responses:
+        "200":
+          description: A random question
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      question:
+                        $ref: "#/components/schemas/Question"
+
+  /api/v1/questions/{category}:
+    get:
+      summary: Get all questions for a category
+      parameters:
+        - name: category
+          in: path
+          required: true
+          schema:
+            type: string
+            enum:
+              [
+                fun,
+                deep,
+                work,
+                travel,
+                relationship,
+                favorites,
+                culture,
+                future,
+                childhood,
+                hypothetical,
+                wildcard,
+              ]
+      responses:
+        "200":
+          description: Questions for the given category
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  results:
+                    type: integer
+                  data:
+                    type: object
+                    properties:
+                      questions:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Question"
+        "404":
+          description: No questions found for the given category
+
+  /api/v1/questions/{category}/random:
+    get:
+      summary: Get one random question from a category
+      parameters:
+        - name: category
+          in: path
+          required: true
+          schema:
+            type: string
+            enum:
+              [
+                fun,
+                deep,
+                work,
+                travel,
+                relationship,
+                favorites,
+                culture,
+                future,
+                childhood,
+                hypothetical,
+                wildcard,
+              ]
+      responses:
+        "200":
+          description: A random question from the category
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      question:
+                        $ref: "#/components/schemas/Question"
+        "404":
+          description: No questions found for the given category
+
+components:
+  schemas:
+    Question:
+      type: object
+      properties:
+        question_en:
+          type: string
+        question_kr:
+          type: string
+        categories:
+          type: array
+          items:
+            type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
