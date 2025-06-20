@@ -23,7 +23,7 @@ A public REST API that serves random or categorized ice-breaking questions in bo
 
 ---
 
-## 📚 Categories
+## Categories
 
 - `fun`
 - `deep`
