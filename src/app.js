@@ -18,9 +18,7 @@ app.use(express.json());
 
 app.use("/api/v1/questions", questionRouter);
 
-if (process.env.NODE_ENV === "development") {
-  app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
-}
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 const PORT = process.env.PORT || 3000;
 const DB = process.env.MONGO_URI.replace("<PASSWORD>", process.env.DB_PASSWORD);
